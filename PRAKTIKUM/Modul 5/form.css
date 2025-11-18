@@ -1,0 +1,79 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background: #eef3f8;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    width: 420px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #3579f6;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #3579f6;
+    box-shadow: 0 0 5px rgba(53,121,246,0.4);
+}
+
+.radio-group,
+.checkbox-group {
+    margin-top: 5px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 5px 0;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background: #3579f6;
+    color: white;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #205fd9;
+}
