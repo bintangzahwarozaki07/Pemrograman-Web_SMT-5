@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulir Pendaftaran Pasien - Klinik Sehat</title>
+    <link rel="stylesheet" href="formulir_kliniksehat.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Klinik Sehat</h1>
+    <h2>Formulir Pendaftaran Pasien</h2>
+
+    <form action="#" method="post">
+
+        <label>Nama Lengkap:</label>
+        <input type="text" name="nama" placeholder="Masukkan nama lengkap" required>
+
+        <label>NIK:</label>
+        <input type="text" name="nik" placeholder="Nomor Induk Kependudukan" required>
+
+        <label>Tanggal Lahir:</label>
+        <input type="date" name="tgl_lahir" required>
+
+        <label>Jenis Kelamin:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="jk" value="Laki-laki" required> Laki-laki</label>
+            <label><input type="radio" name="jk" value="Perempuan"> Perempuan</label>
+        </div>
+
+        <label>Alamat Lengkap:</label>
+        <textarea name="alamat" rows="4" placeholder="Masukkan alamat lengkap..." required></textarea>
+
+        <label>No. Telepon / WA:</label>
+        <input type="text" name="telepon" placeholder="0812xxxxxx" required>
+
+        <label>Keluhan Utama:</label>
+        <textarea name="keluhan" rows="4" placeholder="Contoh: demam, batuk, sakit kepala..." required></textarea>
+
+        <label>Riwayat Penyakit:</label>
+        <div class="checkbox-grid">
+            <label><input type="checkbox" name="riwayat_diabetes"> Diabetes</label>
+            <label><input type="checkbox" name="riwayat_hipertensi"> Hipertensi</label>
+            <label><input type="checkbox" name="riwayat_asma"> Asma</label>
+            <label><input type="checkbox" name="riwayat_jantung"> Penyakit Jantung</label>
+        </div>
+
+        <label>Poli Tujuan:</label>
+        <select name="poli" required>
+            <option value="">-- Pilih Poli --</option>
+            <option>Poli Umum</option>
+            <option>Poli Anak</option>
+            <option>Poli Gigi</option>
+            <option>Poli Kandungan</option>
+            <option>Poli Penyakit Dalam</option>
+        </select>
+
+        <button type="submit">Daftar Sekarang</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
