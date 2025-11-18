@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Foto</title>
+  <link rel="stylesheet" href="galeri.css">
+</head>
+<body>
+
+  <header>
+    <h1>🖼️ Detail Foto</h1>
+  </header>
+
+  <main class="detail">
+    <img id="foto" src="" alt="">
+    <div class="info">
+      <h2 id="judul"></h2>
+      <p id="kategori"></p>
+      <p id="deskripsi"></p>
+      <a href="galeri.html" class="btn">← Kembali ke Galeri</a>
+    </div>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const foto = params.get('foto');
+    const judul = params.get('judul');
+    const kategori = params.get('kategori');
+    const deskripsi = params.get('deskripsi');
+
+    if (foto) document.getElementById('foto').src = 'img/' + foto;
+    if (judul) document.getElementById('judul').textContent = judul;
+    if (kategori) document.getElementById('kategori').textContent = 'Kategori: ' + kategori;
+    if (deskripsi) document.getElementById('deskripsi').textContent = deskripsi;
+  </script>
+
+</body>
+</html>

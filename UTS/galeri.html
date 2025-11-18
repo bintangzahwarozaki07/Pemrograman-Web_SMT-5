@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri Foto</title>
+  <link rel="stylesheet" href="galeri.css">
+</head>
+<body>
+
+  <header>
+    <h1>📸 Galeri Foto Keren Bintang Zahwa</h1>
+    <p>Temukan keindahan di setiap kategor foto bintang</p>
+  </header>
+
+  <div class="toolbar">
+    <input type="text" id="search" placeholder="Cari foto..." onkeyup="searchPhotos()">
+    <select id="kategori" onchange="filterKategori()">
+      <option value="all">Semua Kategori</option>
+      <option value="duduk">duduk</option>
+      <option value="berdiri">berdiri</option>
+      <option value="berkaca">berkaca</option>
+    </select>
+  </div>
+
+  
+  <main class="gallery">
+    <div class="photo" data-kategori="berkaca">
+      <a href="detail.html?foto=foto1.jpeg&judul=Foto%20berkaca%201&kategori=berkaca&deskripsi=sedang berkaca%20di cermin%20dan%20keren">
+        <img src="img/foto1.jpeg" alt="Foto berkaca 1">
+      </a>
+    </div>
+
+    <div class="photo" data-kategori="berdiri">
+      <a href="detail.html?foto=foto2.jpeg&judul=Foto%20berdiri%201&kategori=berdiri&deskripsi=menoleh%20di cafe%20yang%20keren">
+        <img src="img/foto2.jpeg" alt="Foto berdiri 1">
+      </a>
+    </div>
+
+    <div class="photo" data-kategori="duduk">
+      <a href="detail.html?foto=foto3.jpeg&judul=Foto%20duduk%201&kategori=duduk&deskripsi=Potret%20billiard%20yang%20dingin">
+        <img src="img/foto3.jpeg" alt="Foto duduk 1">
+      </a>
+    </div>
+
+    <div class="photo" data-kategori="duduk">
+      <a href="detail.html?foto=foto4.jpeg&judul=Foto%20duduk%202&kategori=duduk&deskripsi=melihat sepatu%20di kursi%20yang%20megah">
+        <img src="img/foto4.jpeg" alt="Foto duduk 2">
+      </a>
+    </div>
+
+    <div class="photo" data-kategori="berdiri">
+      <a href="detail.html?foto=foto5.jpeg&judul=Foto%20berdiri%202&kategori=berdiri&deskripsi=di jogja%20c28%20bergaya%20sombong">
+        <img src="img/foto5.jpeg" alt="Foto berdiri 2">
+      </a>
+    </div>
+
+    <div class="photo" data-kategori="berdiri">
+      <a href="detail.html?foto=foto6.jpeg&judul=Foto%20berdiri%202&kategori=berdiri&deskripsi=photobooth%20menoleh%20bergaya%20keren">
+        <img src="img/foto6.jpeg" alt="Foto berdiri 3">
+         </a>
+    </div>
+
+    <div class="photo" data-kategori="berkaca">
+      <a href="detail.html?foto=foto7.jpeg&judul=Foto%20berkaca%202&kategori=berkaca&deskripsi=di madiun%20c28%20bergaya%20melirik">
+        <img src="img/foto7.jpeg" alt="Foto berkaca 2">
+         </a>
+    </div>
+
+    <div class="photo" data-kategori="berdiri">
+      <a href="detail.html?foto=foto8.jpeg&judul=Foto%20berdiri%202&kategori=berdiri&deskripsi=di tawangmangu%20villa%20bergaya%20dinngin">
+        <img src="img/foto8.jpeg" alt="Foto berdiri 4">
+         </a>
+    </div>
+
+    <div class="photo" data-kategori="berdiri">
+      <a href="detail.html?foto=foto9.jpeg&judul=Foto%20berdiri%202&kategori=berdiri&deskripsi=di madiun%20scm mall%20bergaya%20keren">
+        <img src="img/foto9.jpeg" alt="Foto berdiri 5">
+         </a>
+    </div>
+
+  </main>
+
+<section class="biodata">
+  <h2>Biodata Diri</h2>
+  <ul>
+    <li><strong>Nama:</strong> Bintang Zahwa Rozaki</li>
+    <li><strong>NIM:</strong> 2305101115</li>
+    <li><strong>Program Studi:</strong> Teknik Informatika</li>
+    <li><strong>Kampus:</strong> Universitas PGRI Madiun</li>
+    <li><strong>Email:</strong> bintangzahwarozaki@gmail.com</li>
+    <li><strong>Hobi:</strong> Mendengarkan music, billiard, dan Volly</li>
+  </ul>
+</section>
+
+
+
+  <footer>
+    <p>&copy; 2025 Galeri dump | Bintang Zahwa Rozaki ❤️ </p>
+  </footer>
+
+  <script>
+    function searchPhotos() {
+      const input = document.getElementById('search').value.toLowerCase();
+      const photos = document.querySelectorAll('.photo');
+      photos.forEach(photo => {
+        const alt = photo.querySelector('img').alt.toLowerCase();
+        photo.style.display = alt.includes(input) ? '' : 'none';
+      });
+    }
+
+    function filterKategori() {
+      const kategori = document.getElementById('kategori').value;
+      const photos = document.querySelectorAll('.photo');
+      photos.forEach(photo => {
+        if (kategori === 'all' || photo.dataset.kategori === kategori) {
+          photo.style.display = '';
+        } else {
+          photo.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
