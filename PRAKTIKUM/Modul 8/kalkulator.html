@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kalkulator Sederhana</title>
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background: #f1f2f6;
+        padding: 40px;
+    }
+    .calc{
+        width: 350px;
+        background: white;
+        padding:20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    input{
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 5px;
+        border: 1px solid #999;
+    }
+    button{
+        padding: 10px 15px;
+        border:none;
+        margin: 5px;
+        border-radius: 5px;
+        cursor:pointer;
+        background:#2d98da;
+        color:white;
+        font-weight:bold;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="calc">
+    <h2>Kalkulator Sederhana</h2>
+
+    <label>Bilangan 1:</label>
+    <input type="number" id="bil1">
+
+    <label>Bilangan 2:</label>
+    <input type="number" id="bil2">
+
+    <div>
+        <button onclick="hitung('+')">+</button>
+        <button onclick="hitung('-')">-</button>
+        <button onclick="hitung('*')">×</button>
+        <button onclick="hitung('/')">÷</button>
+    </div>
+
+    <h3>Hasil: <span id="hasil"></span></h3>
+</div>
+
+<script>
+function hitung(op){
+    let a = parseFloat(document.getElementById("bil1").value);
+    let b = parseFloat(document.getElementById("bil2").value);
+    let result = 0;
+
+    if(op === '+') result = a + b;
+    else if(op === '-') result = a - b;
+    else if(op === '*') result = a * b;
+    else if(op === '/') result = b !== 0 ? a / b : "Tidak bisa dibagi 0";
+
+    document.getElementById("hasil").innerText = result;
+}
+</script>
+
+</body>
+</html>
