@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Konversi Nilai ke Huruf</title>
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background: #eef2f3;
+        padding: 40px;
+    }
+    .box{
+        background: white;
+        width: 350px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    input, button{
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #bbb;
+    }
+    button{
+        background: #4b7bec;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Konversi Nilai Angka → Nilai Huruf</h2>
+
+    <label>Masukkan Nilai (0 - 100):</label>
+    <input type="number" id="nilai" />
+
+    <button onclick="konversi()">Konversi</button>
+
+    <h3>Hasil: <span id="hasil"></span></h3>
+</div>
+
+<script>
+function konversi(){
+    let n = parseInt(document.getElementById("nilai").value);
+    let grade = "";
+
+    if(n >=0 && n <=40) grade = "E";
+    else if(n <=55) grade = "D";
+    else if(n <=60) grade = "C";
+    else if(n <=65) grade = "BC";
+    else if(n <=70) grade = "B";
+    else if(n <=80) grade = "AB";
+    else if(n <=100) grade = "A";
+    else grade = "Nilai tidak valid!";
+
+    document.getElementById("hasil").innerText = grade;
+}
+</script>
+
+</body>
+</html>
