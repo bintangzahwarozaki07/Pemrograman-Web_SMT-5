@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portofolio Keren</title>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    :root{
+        --bg-dark: #0b0f19;
+        --glass: rgba(255, 255, 255, 0.12);
+        --text: #e9eef7;
+        --muted: #a7b3c7;
+        --accent: #79c8ff;
+    }
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body{
+        background: var(--bg-dark);
+        color: var(--text);
+        min-height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding:40px 20px;
+    }
+
+    .container{
+        width:100%;
+        max-width:1100px;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:40px;
+        background: var(--glass);
+        padding:30px;
+        border-radius:20px;
+        backdrop-filter: blur(10px);
+        border:1px solid rgba(255,255,255,0.08);
+        box-shadow:0 8px 24px rgba(0,0,0,0.5);
+    }
+
+    .hero{
+        height:450px;
+        border-radius:18px;
+        overflow:hidden;
+        background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=60');
+        background-size:cover;
+        background-position:center;
+        position:relative;
+    }
+
+    .hero .overlay{
+        position:absolute;
+        bottom:0;
+        width:100%;
+        padding:20px;
+        background:linear-gradient(transparent, rgba(0,0,0,0.7));
+    }
+
+    .hero h1{
+        font-size:26px;
+        margin-bottom:4px;
+    }
+
+    .hero p{
+        font-size:14px;
+        color:var(--muted);
+    }
+
+    .about h2{
+        font-size:22px;
+        margin-bottom:10px;
+        font-weight:700;
+    }
+
+    .about p{
+        font-size:15px;
+        color:var(--muted);
+        margin-bottom:20px;
+    }
+
+    .cards{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .card{
+        background: var(--glass);
+        border:1px solid rgba(255,255,255,0.1);
+        padding:16px 20px;
+        border-radius:12px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    .card .title{
+        font-size:16px;
+        font-weight:600;
+    }
+
+    .card .year{
+        font-weight:700;
+        color: var(--accent);
+    }
+
+    @media (max-width:850px){
+        .container{
+            grid-template-columns:1fr;
+        }
+        .hero{
+            height:300px;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="hero">
+        <div class="overlay">
+            <h1>WEB PORTOFOLIO KU</h1>
+            <p>Desain web modern dengan background hero dan card layout.</p>
+        </div>
+    </div>
+
+    <div class="about">
+        <h2>TENTANG SAYA</h2>
+        <p>Saya adalah seorang pelajar/desainer yang suka membuat website sederhana, minimalis, dan rapi. Berikut jenjang pendidikan saya:</p>
+
+        <div class="cards">
+            <div class="card">
+                <div class="title">SD</div>
+                <div class="year">2011</div>
+            </div>
+            <div class="card">
+                <div class="title">SMP</div>
+                <div class="year">2017</div>
+            </div>
+            <div class="card">
+                <div class="title">SMA</div>
+                <div class="year">2020</div>
+            </div>
+            <div class="card">
+                <div class="title">S1</div>
+                <div class="year">2023</div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
